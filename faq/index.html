@@ -6,23 +6,25 @@
 <body style="margin: auto; max-width: 95%; width: 800px">
   <h1 style="text-align: center">Nostr FAQ</h1>
 
-  <h2>Is Nostr a Bitcoin thing?</h2>
+  <h2
+    >Is Nostr a Bitcoin thing?
+  </h2>
   <p>
-    No. Nostr has no relationship to Bitcoin, does not depend on Bitcoin and no
-    one has to have ever heard the word "Bitcoin" uttered to them in order to
-    use Nostr.
+   No. While Bitcoin can and has been integrated with Nostr, Nostr is an 
+   independent communications protocol. No use or understanding of Bitcoin
+   is required to participate.
   </p>
 
   <h2>
-    How can I see my friend posts if I post on a specific relays and my friend
+    How can I see my friend's notes if I post on a specific relays and my friend
     on others?
   </h2>
   <p>
     Different approaches can be used, but the most common one is that your
     client will automatically announce the relays you generally publish to, and
     your friend's client will automatically connect to these relays specifically
-    to fetch your posts (and connect to other relays to fetch other people's
-    posts).
+    to fetch your notes (and connect to other relays to fetch other people's
+    notes).
   </p>
 
   <h2>
@@ -30,28 +32,183 @@
     good censorship)?
   </h2>
   <p>
-    It is not true that Nostr doesn't have moderation or censorship. Nostr just
-    doesn't have a central committee of censors, but each relay is privately
-    owned and can censor anyone they want. As the network grow it will become
-    more common for relays to have some form of sign-up process so not everyone
-    can publish a million offensive notes to every relay using throwaway
-    identities and get away with it.
+    There are any methods of moderation available to limit what you see. Relays 
+    are privately owned and can remove content as the owner sees fit. As the  
+    network grows, it will become more common for relays to have stated rules  
+    and sign up processes that limit what can be published and by whom.  It is  
+    your choice which relays to use that align with your worldview and interests.
+    You are in control. Clients can also help protect you from harrassment and  
+    spam by fetching only the notes you request and filtering out junk. The 
+    option to mute other users is also available in most clients.
   </p>
+ 
+  <h2>
+    How can Nostr stay decentralized if the amount of content relays have to
+    store keeps getting bigger and so relays get increasingly costlier to run?
+  </h2>
   <p>
-    But even in a world in which relays don't do any of that clients can still
-    protect users from harassment by fetching <em>only what they want</em> from
-    relays and filtering out garbage locally -- in fact many clients already do
-    this using various heuristics.
+    Relays do not need to store everything forever and often don't.  Different
+    relays can be large, small, long term, short term, or whatever its owner
+    decides is best. You can even run your own. 
   </p>
 
   <h2>
-    How can Nostr stay decentralized if the amount of content relays have to
-    store keep getting bigger and so relays get increasingly costlier to run?
+    How do I find more relays?
   </h2>
   <p>
-    This is not what happens. Relays do not have to store everything and are
-    never expected to store everything. Relays can store posts only from people
-    they want, and only for the time they want (they can delete things). A relay
-    database can be as small as few kilobytes just for your personal notes.
+    Ask your friends, check other people's relay lists, or use one of the relay
+    explorers that are available.
   </p>
+
+  <h2>
+    Should I connect to a lot of relays?
+  </h2>
+  <p>
+    Too many relays can bog down your client and ruin your experience. Not enough
+    relays can leave you in the dark. Try adding and removing a few until you 
+    find what works best for you. Give your clients a little time to connect
+    after each addition or removal, they need time to talk to eachother.
+  </p>
+
+  <h2>
+    Can my data be lost if a relay shuts down?
+  </h2>
+  <p>
+    Yes, but if you are connected to more than one reliable relay it should not
+    be an issue. If you are concerned about this happening, consider using a paid
+    relay or hosting your own.
+  </p>
+
+  <h2>
+    Why can't I follow as many people as I want?
+  </h2>
+  <p>
+    You CAN follow as many people as you want, but if that number is very large,
+    your experience may be degraded. Because there is no central server, data is
+    pulled from many different places. Requesting a lot of data can slow that
+    process down, but don't worry. You can follow A LOT of people before that
+    becomes a concern.
+  </p>
+
+  <h2>
+    Why can't I read every note thats ever been posted publicly?
+  </h2>
+  <p>
+    Relays can get rid of old stuff to make room for new stuff. You should be
+    able to find many old notes on relays that specialize in long term storage.
+  </p>
+
+  <h2>
+    Is the Global, Universe, or Plaza feed actually global?
+  </h2>
+  <p>
+    Not really. Each client has a set of relays that it uses to fill these feeds
+    at random. Many allow you to change them too.
+  </p>
+
+  <h2>
+    Why are replies and reactions different on different clients?
+  </h2>
+  <p>
+    Each client has its own method for gathering this information. Different
+    relays handle this information in different ways as well. As the network 
+    grows, this should become more stable across clients.
+  </p>
+
+  <h2>
+    How do I find my friends?
+  </h2>
+  <p>
+    Ask for their npub or Nostr address, then you can search to find them.
+  </p>
+
+  <h2>
+    Why is my follower count different all the time?
+  </h2>
+  <p>
+    A follow is an action taken by someone else. That information is stored 
+    with their data, just as who you follow is stored with your data.
+    Each client and relay handles this differently so you may see 
+    inconsistencies across clients.
+  </p>
+
+  <h2>
+    How can I find topics I enjoy?
+  </h2>
+  <p>
+    The network is still very new and topic discovery is constantly growing.
+    Hashtag searches are currently very popular. You can even follow hashtags
+    in some clients. Other methods such as AI-powered data vending machines, 
+    search relays, and curated lists exist too. Once you learn more about 
+    what Nostr has to offer, you will find which method works best for you.
+  </p>
+
+  <h2>
+    I messed up. How can I delete my note?
+  </h2>
+  <p>
+    Some clients offer a "request deletion" feature. Ultimately, it is up to
+    relays to honor your request. If you are concerned about deletion, check 
+    with your relay operators and use a client that offers the feature. There
+    is no guarantee that it will be fully deleted from every relay.
+  </p>
+
+  <h2>
+    Can I make my profile private?
+  </h2>
+  <p>
+    No, most activity on Nostr is public unless it is handled only by 
+    specialized, private relays.
+  </p>
+
+  <h2>
+    How can I recover my account if I lose my private key/nsec?
+  </h2>
+  <p>
+    You can't. Keep it safe and secure. Keep a backup copy. Only enter it in
+    clients/extensions/key-keepers that you trust.
+  </p>
+
+  <h2>
+    Why can't i reset my private key/nsec?
+  </h2>
+  <p>
+    Each key is linked to the unique identity, or npub, when it is created.
+    Because there is no central authority to issue this to you, you are fully
+    responsible for keeping your identity safe.
+  </p>
+
+  <h2>
+    Who is in charge of Nostr?
+  </h2>
+  <p>
+    No one. Nostr was designed to allow you to use many different apps and clients
+    for all sorts of stuff, with just one identity. Cool, right? With no central
+    authority to communicate through, you're in charge of what you see, read,
+    watch, and do.
+  </p>
+
+  <h2>
+    How is Nostr different than other decentralized protocols?
+  </h2>
+  <p>
+    Most other protocols are dependent on small servers to store your data.
+    Nostr's relays are similar, but even smaller and there are many. More are
+    joining the network all the time. Your data is written to many relays in
+    many places. This ensures that your data is still out there somewhere, in
+    the event that a relay shuts down or if someone is trying to censor you.
+    You can always run your own relay too!
+  </p>
+
+  <h2>
+    Why should I use Nostr instead of _______?
+  </h2>
+  <p>
+    Nostr puts you in control of what you see and interact with in an online
+    social setting. Additionally, no one can "cancel" you, yours friends, or
+    anyone else. The social part is only the base layer of a growing
+    ecosystem of different games, productivity tools, and all sorts of other 
+    stuff. Give it a try!
+  </p>
+
 </body>
