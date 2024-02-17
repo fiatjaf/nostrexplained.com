@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8" />
+<title>Nostr FAQ</title>
+
+<h1>Nostr FAQ</h1>
+
+<h2>Is Nostr a Bitcoin thing?</h2>
+<p>
+  No. Nostr has no relationship to Bitcoin, does not depend on Bitcoin and no
+  one has to have ever heard the word "Bitcoin" uttered to them in order to use
+  Nostr.
+</p>
+
+<h2>
+  How can I see my friend posts if I post on a specific relays and my friend on
+  others?
+</h2>
+<p>
+  Different approaches can be used, but the most common one is that your client
+  will automatically announce the relays you generally publish to, and your
+  friend's client will automatically connect to these relays specifically to
+  fetch your posts (and connect to other relays to fetch other people's posts).
+</p>
+
+<h2>
+  How can Nostr deal with horrible people without moderation (or some form of
+  good censorship)?
+</h2>
+<p>
+  It is not true that Nostr doesn't have moderation or censorship. Nostr just
+  doesn't have a central committee of censors, but each relay is privately owned
+  and can censor anyone they want. As the network grow it will become more
+  common for relays to have some form of sign-up process so not everyone can
+  publish a million offensive notes to every relay using throwaway identities
+  and get away with it.
+</p>
+<p>
+  But even in a world in which relays don't do any of that clients can still
+  protect users from harassment by fetching <em>only what they want</em> from
+  relays and filtering out garbage locally -- in fact many clients already do
+  this using various heuristics.
+</p>
+
+<h2>
+  How can Nostr stay decentralized if the amount of content relays have to store
+  keep getting bigger and so relays get increasingly costlier to run?
+</h2>
+<p>
+  This is not what happens. Relays do not have to store everything and are never
+  expected to store everything. Relays can store posts only from people they
+  want, and only for the time they want (they can delete things). A relay
+  database can be as small as few kilobytes just for your personal notes.
+</p>
